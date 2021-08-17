@@ -1,6 +1,27 @@
-// "DOMContentLoaded" event'en sørger for, at Javascriptet først kører når hele HTML dokumentet er indlæst
-document.addEventListener("DOMContentLoaded", () => {
+let number =  5;
+let min = 0;
+let mid = 10;
+let max = 15;
+let plusButton = document.querySelector("#btn-count-increase");
+let minusButton = document.querySelector("#btn-count-decrease");
+let textCountElement = document.querySelector("#text-count")
 
-	// skriv din kode her...
+function updateNumber() {
+    textCountElement.textContent = number;
+}
 
-}); // Afslutter: DOMContentLoaded
+updateNumber();
+
+plusButton.addEventListener("click", () =>{
+    if(number < max){
+        number++
+        updateNumber();
+    }
+});
+
+minusButton.addEventListener("click", () =>{
+    if(number > min){
+        number--
+        updateNumber();
+    }
+});
