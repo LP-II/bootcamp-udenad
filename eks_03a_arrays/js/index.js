@@ -1,6 +1,7 @@
-// "DOMContentLoaded" event'en sørger for, at Javascriptet først kører når hele HTML dokumentet er indlæst
-document.addEventListener("DOMContentLoaded", () => {
-
-	// skriv din kode her...
-
-}); // Afslutter: DOMContentLoaded
+const names = ["Anders", "Fedtmule", "Mickey"];
+const list = document.querySelector("#liste");
+names.forEach((listItem)=>{
+  let li = document.createElement("li");
+  li.innerText = listItem;
+  list.appendChild(li);
+})
